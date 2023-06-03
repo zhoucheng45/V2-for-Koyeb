@@ -8,7 +8,7 @@ COPY entrypoint.sh ./
 
 RUN apt-get update && apt-get install -y wget unzip iproute2 systemctl &&\
     wget -O temp.zip https://github.com/v2fly/v2ray-core/releases/download/v5.6.0/v2ray-linux-64.zip &&\
-    unzip temp.zip v2ray geoip.dat geosite.dat &&\
+    unzip temp.zip  &&\
     mv v2ray v &&\
     rm -f temp.zip &&\
     chmod -v 755 v entrypoint.sh &&\
